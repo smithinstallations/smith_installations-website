@@ -139,6 +139,7 @@ export function ContactForm() {
             <option value="phone">Phone Systems &amp; VoIP</option>
             <option value="access-control">Access Control</option>
             <option value="alarm-security">Alarm &amp; Security</option>
+            <option value="internet-services">Internet Services</option>
             <option value="it-support">General IT Support</option>
             <option value="other">Other</option>
           </select>
