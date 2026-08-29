@@ -31,41 +31,112 @@ const services = [
     title: "Network & Infrastructure",
     description:
       "Structured cabling, switching, routing, and secure high-performance networks designed, installed, and maintained for reliability.",
+    capabilities: [
+      "Cat 5e, Cat 6, and Cat 6A cabling installation",
+      "Structured cabling system design",
+      "Patch panel termination, testing & certification",
+      "Racks, cabinets, and cable management",
+    ],
   },
   {
     title: "Wireless Surveys & Design",
     description:
       "Site surveys, heat mapping, and enterprise Wi-Fi design that eliminates dead zones and supports dense, mission-critical environments.",
+    capabilities: [
+      "Predictive & on-site wireless surveys",
+      "Heat mapping and coverage analysis",
+      "Point-to-point and point-to-multipoint wireless",
+      "Outdoor broadband and Wi-Fi hotspots",
+    ],
   },
   {
     title: "Phone Systems & VoIP",
     description:
       "Modern voice solutions, from traditional PBX to cloud-based VoIP, tailored to how your team communicates.",
+    capabilities: [
+      "Cloud-hosted and on-premise VoIP",
+      "PBX installation and migration",
+      "Paging and intercom systems",
+      "Wireless VoIP deployments",
+    ],
   },
   {
     title: "Access Control",
     description:
       "Integrated entry management with leading platforms including ICT and Salto — keycards, fobs, biometrics, and mobile credentials.",
+    capabilities: [
+      "ICT and Salto certified installations",
+      "Keycard, fob, and mobile credentials",
+      "Intercom and door hardware integration",
+      "Centralized multi-door management",
+    ],
   },
   {
     title: "Video Surveillance",
     description:
       "Commercial camera systems from Digital WatchDog, Speco, and Hikvision with remote viewing, storage, and alert integration.",
+    capabilities: [
+      "Digital WatchDog, Speco, and Hikvision systems",
+      "IP, dome, and wireless cameras",
+      "NVR/DVR storage and remote viewing",
+      "Indoor and outdoor coverage design",
+    ],
   },
   {
     title: "Alarm & Security",
     description:
       "Intrusion detection, monitoring, surveillance integration, and alert systems that protect your people and property around the clock.",
+    capabilities: [
+      "Intrusion detection and alert systems",
+      "24/7 monitoring options",
+      "Camera and access control integration",
+      "Fire and life-safety add-ons",
+    ],
   },
   {
     title: "Internet Services",
     description:
       "Resold business internet and connectivity solutions, sourced and managed so you get dependable bandwidth without the hassle.",
+    capabilities: [
+      "Business-class internet circuits",
+      "Carrier sourcing and management",
+      "Failover and redundant connectivity",
+      "Single point of contact for support",
+    ],
   },
   {
     title: "General IT Support",
     description:
       "Day-to-day tech help, troubleshooting, and strategic guidance so you can focus on running your business.",
+    capabilities: [
+      "On-site and remote troubleshooting",
+      "Equipment installation and relocation",
+      "Router, switch, and workstation swaps",
+      "Strategic technology planning",
+    ],
+  },
+];
+
+const highlights = [
+  {
+    title: "One call for everything",
+    description:
+      "Network, phones, cameras, access control, alarms, and internet — designed, installed, and supported by a single accountable partner.",
+  },
+  {
+    title: "Design-first approach",
+    description:
+      "Every project starts with a survey and a plan, so your system fits your building, your budget, and where your business is headed.",
+  },
+  {
+    title: "Installed to last",
+    description:
+      "Certified cabling, documented work, and tested systems — built right the first time and supported for the long haul.",
+  },
+  {
+    title: "Local and responsive",
+    description:
+      "Real people who answer the phone, show up on site, and stand behind their work long after install day.",
   },
 ];
 
