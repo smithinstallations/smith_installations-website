@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { ContactForm } from "@/components/ContactForm";
-import logoAsset from "@/assets/smith-installations-logo.png.asset.json";
+import logoUrl from "@/assets/smith-installations-horizontal-color.svg?url";
 
 export const Route = createFileRoute("/")({
   component: Index,
