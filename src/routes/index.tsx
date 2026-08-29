@@ -220,38 +220,64 @@ function Index() {
           </div>
         </section>
 
+        <section className="border-t border-border px-6 py-16">
+          <div className="mx-auto max-w-5xl">
+            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+              {highlights.map((highlight) => (
+                <div key={highlight.title} className="rounded-xl border border-border bg-card p-5 text-card-foreground shadow-sm">
+                  <h3 className="text-base font-semibold">{highlight.title}</h3>
+                  <p className="mt-2 text-sm text-muted-foreground">{highlight.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         <section id="services" className="border-t border-border px-6 py-20">
           <div className="mx-auto max-w-5xl">
             <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
-              <div className="order-2 lg:order-1">
-                <div className="overflow-hidden rounded-2xl border border-border shadow-sm">
-                  <img
-                    src={servicesImage}
-                    alt="Modern office with access control, security camera, phones, and computers"
-                    width={1024}
-                    height={768}
-                    loading="lazy"
-                    className="h-auto w-full object-cover"
-                  />
-                </div>
+              <div className="overflow-hidden rounded-2xl border border-border shadow-sm">
+                <img
+                  src={servicesImage}
+                  alt="Modern office with access control, security camera, phones, and computers"
+                  width={1024}
+                  height={768}
+                  loading="lazy"
+                  className="h-auto w-full object-cover"
+                />
               </div>
-              <div className="order-1 lg:order-2">
+              <div>
                 <h2 className="text-3xl font-semibold tracking-tight">What we do</h2>
                 <p className="mt-3 text-muted-foreground">
-                  Practical technology services built around your business needs.
+                  End-to-end technology services tailored for your business — from cabling and
+                  Wi-Fi to cameras, access control, and everything IT.
                 </p>
-                <div className="mt-8 grid gap-6 sm:grid-cols-2">
-                  {services.map((service) => (
-                    <div
-                      key={service.title}
-                      className="rounded-xl border border-border bg-card p-5 text-card-foreground shadow-sm"
-                    >
-                      <h3 className="text-base font-semibold">{service.title}</h3>
-                      <p className="mt-2 text-sm text-muted-foreground">{service.description}</p>
-                    </div>
-                  ))}
-                </div>
+                <a
+                  href="#contact"
+                  className="mt-6 inline-flex items-center justify-center rounded-md bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+                >
+                  Get a free quote
+                </a>
               </div>
+            </div>
+            <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+              {services.map((service) => (
+                <div
+                  key={service.title}
+                  className="rounded-xl border border-border bg-card p-5 text-card-foreground shadow-sm"
+                >
+                  <h3 className="text-base font-semibold">{service.title}</h3>
+                  <p className="mt-2 text-sm text-muted-foreground">{service.description}</p>
+                  <ul className="mt-4 space-y-1.5 border-t border-border pt-4 text-sm text-muted-foreground">
+                    {service.capabilities.map((capability) => (
+                      <li key={capability} className="flex gap-2">
+                        <span aria-hidden="true" className="text-primary">•</span>
+                        {capability}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
             </div>
           </div>
         </section>
