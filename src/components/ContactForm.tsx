@@ -136,8 +136,10 @@ export function ContactForm() {
               Select a service
             </option>
             <option value="network">Network &amp; Infrastructure</option>
+            <option value="wireless">Wireless Surveys &amp; Design</option>
             <option value="phone">Phone Systems &amp; VoIP</option>
-            <option value="access-control">Access Control</option>
+            <option value="access-control">Access Control (ICT / Salto)</option>
+            <option value="cameras">Video Surveillance / Cameras</option>
             <option value="alarm-security">Alarm &amp; Security</option>
             <option value="internet-services">Internet Services</option>
             <option value="it-support">General IT Support</option>

@@ -8,17 +8,17 @@ export const Route = createFileRoute("/")({
   component: Index,
   head: () => ({
     meta: [
-      { title: "Smith Installations LLC | Network, Phone, Access Control & IT Support" },
+      { title: "Smith Installations LLC | Network, Surveillance, Access Control & IT Support" },
       {
         name: "description",
         content:
-          "Smith Installations LLC delivers reliable IT services for businesses: network infrastructure, phone systems, access control, alarm security, internet, and IT support. Get in touch for a free consultation.",
+          "Smith Installations LLC delivers business technology services: network infrastructure, wireless surveys, phone systems, access control, video surveillance, alarm security, internet, and IT support.",
       },
-      { property: "og:title", content: "Smith Installations LLC | Network, Phone, Access Control & IT Support" },
+      { property: "og:title", content: "Smith Installations LLC | Network, Surveillance, Access Control & IT Support" },
       {
         property: "og:description",
         content:
-          "Reliable IT services for businesses: network infrastructure, phone systems, access control, alarm security, internet, and IT support.",
+          "Business technology services: network infrastructure, wireless surveys, phone systems, access control, video surveillance, alarm security, internet, and IT support.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -30,32 +30,61 @@ const services = [
   {
     title: "Network & Infrastructure",
     description:
-      "Design, install, and maintain secure, high-performance networks that keep your business connected.",
+      "Structured cabling, switching, routing, and secure high-performance networks designed, installed, and maintained for reliability.",
+  },
+  {
+    title: "Wireless Surveys & Design",
+    description:
+      "Site surveys, heat mapping, and enterprise Wi-Fi design that eliminates dead zones and supports dense, mission-critical environments.",
   },
   {
     title: "Phone Systems & VoIP",
     description:
-      "Modern voice solutions, from traditional PBX to cloud-based VoIP, tailored to how you communicate.",
+      "Modern voice solutions, from traditional PBX to cloud-based VoIP, tailored to how your team communicates.",
   },
   {
     title: "Access Control",
     description:
-      "Control who goes where with keycards, fobs, biometric readers, and integrated entry management.",
+      "Integrated entry management with leading platforms including ICT and Salto — keycards, fobs, biometrics, and mobile credentials.",
+  },
+  {
+    title: "Video Surveillance",
+    description:
+      "Commercial camera systems from Digital WatchDog, Speco, and Hikvision with remote viewing, storage, and alert integration.",
   },
   {
     title: "Alarm & Security",
     description:
-      "Protect your people and property with intrusion detection, monitoring, surveillance, and alert systems.",
+      "Intrusion detection, monitoring, surveillance integration, and alert systems that protect your people and property around the clock.",
   },
   {
     title: "Internet Services",
     description:
-      "Resold business internet plans and connectivity solutions, sourced and managed so you get reliable bandwidth.",
+      "Resold business internet and connectivity solutions, sourced and managed so you get dependable bandwidth without the hassle.",
   },
   {
     title: "General IT Support",
     description:
       "Day-to-day tech help, troubleshooting, and strategic guidance so you can focus on running your business.",
+  },
+];
+
+const platforms = [
+  {
+    category: "Cameras",
+    items: "Digital WatchDog, Speco, Hikvision",
+  },
+  {
+    category: "Access Control",
+    items: "ICT, Salto",
+  },
+  {
+    category: "Wireless",
+    items: "Site surveys, heat mapping, enterprise Wi-Fi design",
+  },
+  {
+    category: "Networks & Voice",
+    items: "Structured cabling, switching, PBX & cloud VoIP",
   },
 ];
 
@@ -87,7 +116,7 @@ function Index() {
                   Technology infrastructure built for growing businesses
                 </h1>
                 <p className="mt-6 text-lg text-muted-foreground">
-                  From network cabling and phone systems to access control and alarm monitoring,{" "}
+                  From structured cabling and enterprise Wi-Fi to access control, video surveillance, phone systems, and alarm monitoring,{" "}
                   <strong className="text-foreground">Smith Installations LLC</strong> designs, installs,
                   and supports the technology that keeps businesses secure, connected, and productive —
                   with the responsiveness of a local partner and the capability to scale.
@@ -152,6 +181,28 @@ function Index() {
                   ))}
                 </div>
               </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="border-t border-border px-6 py-20">
+          <div className="mx-auto max-w-5xl">
+            <div className="text-center">
+              <h2 className="text-3xl font-semibold tracking-tight">Platforms & specialties</h2>
+              <p className="mt-3 text-muted-foreground">
+                We integrate proven hardware and design methods that fit your environment and budget.
+              </p>
+            </div>
+            <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+              {platforms.map((platform) => (
+                <div
+                  key={platform.category}
+                  className="rounded-xl border border-border bg-card p-5 text-card-foreground shadow-sm"
+                >
+                  <h3 className="text-base font-semibold">{platform.category}</h3>
+                  <p className="mt-2 text-sm text-muted-foreground">{platform.items}</p>
+                </div>
+              ))}
             </div>
           </div>
         </section>
