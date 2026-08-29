@@ -73,8 +73,8 @@ function Index() {
               Technology that just works
             </h1>
             <p className="mt-6 text-lg text-muted-foreground">
-              A man of many talents. We focus on network, phone, access control, and everything IT
-              — so your business stays connected, secure, and supported.
+              A man of many talents. We focus on network, phone, access control, alarm, and
+              everything IT — so your business stays connected, secure, and supported.
             </p>
             <div className="mt-8 flex flex-wrap justify-center gap-4">
               <a
@@ -101,7 +101,7 @@ function Index() {
                 Practical technology services built around your business needs.
               </p>
             </div>
-            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
               {services.map((service) => (
                 <div
                   key={service.title}
