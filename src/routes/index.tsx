@@ -45,6 +45,11 @@ const services = [
       "Protect your people and property with intrusion detection, monitoring, surveillance, and alert systems.",
   },
   {
+    title: "Internet Services",
+    description:
+      "Resold business internet plans and connectivity solutions, sourced and managed so you get reliable bandwidth.",
+  },
+  {
     title: "General IT Support",
     description:
       "Day-to-day tech help, troubleshooting, and strategic guidance so you can focus on running your business.",
