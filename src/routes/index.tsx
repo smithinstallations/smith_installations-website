@@ -197,7 +197,7 @@ function Index() {
                     href="#contact"
                     className="inline-flex items-center justify-center rounded-md bg-primary px-6 py-3 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
                   >
-                    Start a project
+                    Get a free quote
                   </a>
                   <a
                     href="#services"
@@ -206,6 +206,9 @@ function Index() {
                     Explore services
                   </a>
                 </div>
+                <p className="mt-6 text-sm text-muted-foreground">
+                  Free on-site estimates · Certified installers · Ongoing support after install
+                </p>
               </div>
               <div className="overflow-hidden rounded-2xl border border-border shadow-sm">
                 <img
