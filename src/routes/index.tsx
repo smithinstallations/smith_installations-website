@@ -63,9 +63,9 @@ function Index() {
       <header className="border-b border-border">
         <div className="mx-auto flex max-w-5xl items-center justify-between px-6 py-5">
           <img
-            src={logoAsset.url}
+            src={logoUrl}
             alt="Smith Installations LLC"
-            className="h-10 w-auto"
+            className="h-10 w-auto sm:h-12"
           />
           <a
             href="#contact"
