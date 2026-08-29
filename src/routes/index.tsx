@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { ContactForm } from "@/components/ContactForm";
+import logoAsset from "@/assets/smith-installations-logo.png.asset.json";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -61,7 +62,11 @@ function Index() {
     <div className="flex min-h-screen flex-col bg-background text-foreground">
       <header className="border-b border-border">
         <div className="mx-auto flex max-w-5xl items-center justify-between px-6 py-5">
-          <span className="text-lg font-semibold tracking-tight">IT Solutions</span>
+          <img
+            src={logoAsset.url}
+            alt="Smith Installations LLC"
+            className="h-10 w-auto"
+          />
           <a
             href="#contact"
             className="inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
