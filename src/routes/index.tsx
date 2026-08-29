@@ -35,9 +35,14 @@ const services = [
       "Modern voice solutions, from traditional PBX to cloud-based VoIP, tailored to how you communicate.",
   },
   {
-    title: "Access Control & Security",
+    title: "Access Control",
     description:
-      "Protect your people and property with smart access control, surveillance, and physical security systems.",
+      "Control who goes where with keycards, fobs, biometric readers, and integrated entry management.",
+  },
+  {
+    title: "Alarm & Security",
+    description:
+      "Protect your people and property with intrusion detection, monitoring, surveillance, and alert systems.",
   },
   {
     title: "General IT Support",
