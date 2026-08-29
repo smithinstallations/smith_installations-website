@@ -1,22 +1,24 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { ContactForm } from "@/components/ContactForm";
 import logoUrl from "@/assets/smith-installations-horizontal-color.svg?url";
+import heroImage from "@/assets/hero-image.jpg";
+import servicesImage from "@/assets/services-image.jpg";
 
 export const Route = createFileRoute("/")({
   component: Index,
   head: () => ({
     meta: [
-      { title: "IT Solutions | Network, Phone, Access Control & IT Support" },
+      { title: "Smith Installations LLC | Network, Phone, Access Control & IT Support" },
       {
         name: "description",
         content:
-          "Reliable IT services for businesses: network infrastructure, phone systems, access control, and general IT support. Get in touch for a free consultation.",
+          "Smith Installations LLC delivers reliable IT services for businesses: network infrastructure, phone systems, access control, alarm security, internet, and IT support. Get in touch for a free consultation.",
       },
-      { property: "og:title", content: "IT Solutions | Network, Phone, Access Control & IT Support" },
+      { property: "og:title", content: "Smith Installations LLC | Network, Phone, Access Control & IT Support" },
       {
         property: "og:description",
         content:
-          "Reliable IT services for businesses: network infrastructure, phone systems, access control, and general IT support.",
+          "Reliable IT services for businesses: network infrastructure, phone systems, access control, alarm security, internet, and IT support.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -77,50 +79,79 @@ function Index() {
       </header>
 
       <main className="flex-1">
-        <section className="px-6 py-20 sm:py-28">
-          <div className="mx-auto max-w-3xl text-center">
-            <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">
-              Technology that just works
-            </h1>
-            <p className="mt-6 text-lg text-muted-foreground">
-              A man of many talents. We focus on network, phone, access control, alarm, and
-              everything IT — so your business stays connected, secure, and supported.
-            </p>
-            <div className="mt-8 flex flex-wrap justify-center gap-4">
-              <a
-                href="#contact"
-                className="inline-flex items-center justify-center rounded-md bg-primary px-6 py-3 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
-              >
-                Start a project
-              </a>
-              <a
-                href="#services"
-                className="inline-flex items-center justify-center rounded-md border border-input bg-background px-6 py-3 text-sm font-medium text-foreground transition-colors hover:bg-accent"
-              >
-                Explore services
-              </a>
+        <section className="px-6 py-16 sm:py-24">
+          <div className="mx-auto max-w-5xl">
+            <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-12">
+              <div className="text-center lg:text-left">
+                <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">
+                  Technology infrastructure built for growing businesses
+                </h1>
+                <p className="mt-6 text-lg text-muted-foreground">
+                  From network cabling and phone systems to access control and alarm monitoring,{" "}
+                  <strong className="text-foreground">Smith Installations LLC</strong> designs, installs,
+                  and supports the technology that keeps businesses secure, connected, and productive —
+                  with the responsiveness of a local partner and the capability to scale.
+                </p>
+                <div className="mt-8 flex flex-wrap justify-center gap-4 lg:justify-start">
+                  <a
+                    href="#contact"
+                    className="inline-flex items-center justify-center rounded-md bg-primary px-6 py-3 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+                  >
+                    Start a project
+                  </a>
+                  <a
+                    href="#services"
+                    className="inline-flex items-center justify-center rounded-md border border-input bg-background px-6 py-3 text-sm font-medium text-foreground transition-colors hover:bg-accent"
+                  >
+                    Explore services
+                  </a>
+                </div>
+              </div>
+              <div className="overflow-hidden rounded-2xl border border-border shadow-sm">
+                <img
+                  src={heroImage}
+                  alt="IT technician working on a network server rack"
+                  width={1280}
+                  height={720}
+                  className="h-auto w-full object-cover"
+                />
+              </div>
             </div>
           </div>
         </section>
 
         <section id="services" className="border-t border-border px-6 py-20">
           <div className="mx-auto max-w-5xl">
-            <div className="mb-12 text-center">
-              <h2 className="text-3xl font-semibold tracking-tight">What we do</h2>
-              <p className="mt-3 text-muted-foreground">
-                Practical technology services built around your business needs.
-              </p>
-            </div>
-            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-              {services.map((service) => (
-                <div
-                  key={service.title}
-                  className="rounded-xl border border-border bg-card p-6 text-card-foreground shadow-sm"
-                >
-                  <h3 className="text-lg font-semibold">{service.title}</h3>
-                  <p className="mt-2 text-sm text-muted-foreground">{service.description}</p>
+            <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
+              <div className="order-2 lg:order-1">
+                <div className="overflow-hidden rounded-2xl border border-border shadow-sm">
+                  <img
+                    src={servicesImage}
+                    alt="Modern office with access control, security camera, phones, and computers"
+                    width={1024}
+                    height={768}
+                    loading="lazy"
+                    className="h-auto w-full object-cover"
+                  />
                 </div>
-              ))}
+              </div>
+              <div className="order-1 lg:order-2">
+                <h2 className="text-3xl font-semibold tracking-tight">What we do</h2>
+                <p className="mt-3 text-muted-foreground">
+                  Practical technology services built around your business needs.
+                </p>
+                <div className="mt-8 grid gap-6 sm:grid-cols-2">
+                  {services.map((service) => (
+                    <div
+                      key={service.title}
+                      className="rounded-xl border border-border bg-card p-5 text-card-foreground shadow-sm"
+                    >
+                      <h3 className="text-base font-semibold">{service.title}</h3>
+                      <p className="mt-2 text-sm text-muted-foreground">{service.description}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -142,7 +173,7 @@ function Index() {
 
       <footer className="border-t border-border px-6 py-8">
         <div className="mx-auto max-w-5xl text-center text-sm text-muted-foreground">
-          &copy; {new Date().getFullYear()} IT Solutions. All rights reserved.
+          &copy; {new Date().getFullYear()} Smith Installations LLC. All rights reserved.
         </div>
       </footer>
     </div>
