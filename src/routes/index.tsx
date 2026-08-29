@@ -31,41 +31,112 @@ const services = [
     title: "Network & Infrastructure",
     description:
       "Structured cabling, switching, routing, and secure high-performance networks designed, installed, and maintained for reliability.",
+    capabilities: [
+      "Cat 5e, Cat 6, and Cat 6A cabling installation",
+      "Structured cabling system design",
+      "Patch panel termination, testing & certification",
+      "Racks, cabinets, and cable management",
+    ],
   },
   {
     title: "Wireless Surveys & Design",
     description:
       "Site surveys, heat mapping, and enterprise Wi-Fi design that eliminates dead zones and supports dense, mission-critical environments.",
+    capabilities: [
+      "Predictive & on-site wireless surveys",
+      "Heat mapping and coverage analysis",
+      "Point-to-point and point-to-multipoint wireless",
+      "Outdoor broadband and Wi-Fi hotspots",
+    ],
   },
   {
     title: "Phone Systems & VoIP",
     description:
       "Modern voice solutions, from traditional PBX to cloud-based VoIP, tailored to how your team communicates.",
+    capabilities: [
+      "Cloud-hosted and on-premise VoIP",
+      "PBX installation and migration",
+      "Paging and intercom systems",
+      "Wireless VoIP deployments",
+    ],
   },
   {
     title: "Access Control",
     description:
       "Integrated entry management with leading platforms including ICT and Salto — keycards, fobs, biometrics, and mobile credentials.",
+    capabilities: [
+      "ICT and Salto certified installations",
+      "Keycard, fob, and mobile credentials",
+      "Intercom and door hardware integration",
+      "Centralized multi-door management",
+    ],
   },
   {
     title: "Video Surveillance",
     description:
       "Commercial camera systems from Digital WatchDog, Speco, and Hikvision with remote viewing, storage, and alert integration.",
+    capabilities: [
+      "Digital WatchDog, Speco, and Hikvision systems",
+      "IP, dome, and wireless cameras",
+      "NVR/DVR storage and remote viewing",
+      "Indoor and outdoor coverage design",
+    ],
   },
   {
     title: "Alarm & Security",
     description:
       "Intrusion detection, monitoring, surveillance integration, and alert systems that protect your people and property around the clock.",
+    capabilities: [
+      "Intrusion detection and alert systems",
+      "24/7 monitoring options",
+      "Camera and access control integration",
+      "Fire and life-safety add-ons",
+    ],
   },
   {
     title: "Internet Services",
     description:
       "Resold business internet and connectivity solutions, sourced and managed so you get dependable bandwidth without the hassle.",
+    capabilities: [
+      "Business-class internet circuits",
+      "Carrier sourcing and management",
+      "Failover and redundant connectivity",
+      "Single point of contact for support",
+    ],
   },
   {
     title: "General IT Support",
     description:
       "Day-to-day tech help, troubleshooting, and strategic guidance so you can focus on running your business.",
+    capabilities: [
+      "On-site and remote troubleshooting",
+      "Equipment installation and relocation",
+      "Router, switch, and workstation swaps",
+      "Strategic technology planning",
+    ],
+  },
+];
+
+const highlights = [
+  {
+    title: "One call for everything",
+    description:
+      "Network, phones, cameras, access control, alarms, and internet — designed, installed, and supported by a single accountable partner.",
+  },
+  {
+    title: "Design-first approach",
+    description:
+      "Every project starts with a survey and a plan, so your system fits your building, your budget, and where your business is headed.",
+  },
+  {
+    title: "Installed to last",
+    description:
+      "Certified cabling, documented work, and tested systems — built right the first time and supported for the long haul.",
+  },
+  {
+    title: "Local and responsive",
+    description:
+      "Real people who answer the phone, show up on site, and stand behind their work long after install day.",
   },
 ];
 
@@ -126,7 +197,7 @@ function Index() {
                     href="#contact"
                     className="inline-flex items-center justify-center rounded-md bg-primary px-6 py-3 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
                   >
-                    Start a project
+                    Get a free quote
                   </a>
                   <a
                     href="#services"
@@ -135,6 +206,9 @@ function Index() {
                     Explore services
                   </a>
                 </div>
+                <p className="mt-6 text-sm text-muted-foreground">
+                  Free on-site estimates · Certified installers · Ongoing support after install
+                </p>
               </div>
               <div className="overflow-hidden rounded-2xl border border-border shadow-sm">
                 <img
@@ -149,38 +223,64 @@ function Index() {
           </div>
         </section>
 
+        <section className="border-t border-border px-6 py-16">
+          <div className="mx-auto max-w-5xl">
+            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+              {highlights.map((highlight) => (
+                <div key={highlight.title} className="rounded-xl border border-border bg-card p-5 text-card-foreground shadow-sm">
+                  <h3 className="text-base font-semibold">{highlight.title}</h3>
+                  <p className="mt-2 text-sm text-muted-foreground">{highlight.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         <section id="services" className="border-t border-border px-6 py-20">
           <div className="mx-auto max-w-5xl">
             <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
-              <div className="order-2 lg:order-1">
-                <div className="overflow-hidden rounded-2xl border border-border shadow-sm">
-                  <img
-                    src={servicesImage}
-                    alt="Modern office with access control, security camera, phones, and computers"
-                    width={1024}
-                    height={768}
-                    loading="lazy"
-                    className="h-auto w-full object-cover"
-                  />
-                </div>
+              <div className="overflow-hidden rounded-2xl border border-border shadow-sm">
+                <img
+                  src={servicesImage}
+                  alt="Modern office with access control, security camera, phones, and computers"
+                  width={1024}
+                  height={768}
+                  loading="lazy"
+                  className="h-auto w-full object-cover"
+                />
               </div>
-              <div className="order-1 lg:order-2">
+              <div>
                 <h2 className="text-3xl font-semibold tracking-tight">What we do</h2>
                 <p className="mt-3 text-muted-foreground">
-                  Practical technology services built around your business needs.
+                  End-to-end technology services tailored for your business — from cabling and
+                  Wi-Fi to cameras, access control, and everything IT.
                 </p>
-                <div className="mt-8 grid gap-6 sm:grid-cols-2">
-                  {services.map((service) => (
-                    <div
-                      key={service.title}
-                      className="rounded-xl border border-border bg-card p-5 text-card-foreground shadow-sm"
-                    >
-                      <h3 className="text-base font-semibold">{service.title}</h3>
-                      <p className="mt-2 text-sm text-muted-foreground">{service.description}</p>
-                    </div>
-                  ))}
-                </div>
+                <a
+                  href="#contact"
+                  className="mt-6 inline-flex items-center justify-center rounded-md bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+                >
+                  Get a free quote
+                </a>
               </div>
+            </div>
+            <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+              {services.map((service) => (
+                <div
+                  key={service.title}
+                  className="rounded-xl border border-border bg-card p-5 text-card-foreground shadow-sm"
+                >
+                  <h3 className="text-base font-semibold">{service.title}</h3>
+                  <p className="mt-2 text-sm text-muted-foreground">{service.description}</p>
+                  <ul className="mt-4 space-y-1.5 border-t border-border pt-4 text-sm text-muted-foreground">
+                    {service.capabilities.map((capability) => (
+                      <li key={capability} className="flex gap-2">
+                        <span aria-hidden="true" className="text-primary">•</span>
+                        {capability}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
             </div>
           </div>
         </section>
