@@ -3,16 +3,16 @@ import { ContactForm } from "@/components/ContactForm";
 import logoUrl from "@/assets/smith-installations-horizontal-color.svg?url";
 import heroImage from "@/assets/hero-image.jpg";
 import servicesImage from "@/assets/services-image.jpg";
-import digitalWatchdogLogo from "@/assets/logos/digital-watchdog.svg.asset.json";
-import specoLogo from "@/assets/logos/speco.svg.asset.json";
-import hikvisionLogo from "@/assets/logos/hikvision.svg.asset.json";
-import ictLogo from "@/assets/logos/ict.svg.asset.json";
-import saltoLogo from "@/assets/logos/salto.svg.asset.json";
-import ubiquitiLogo from "@/assets/logos/ubiquiti.svg.asset.json";
-import ruckusLogo from "@/assets/logos/ruckus.png.asset.json";
-import ekahauLogo from "@/assets/logos/ekahau.svg.asset.json";
-import fortinetLogo from "@/assets/logos/fortinet.svg.asset.json";
-import arubaLogo from "@/assets/logos/aruba.svg.asset.json";
+import digitalWatchdogLogo from "@/assets/logos/digital-watchdog.svg";
+import specoLogo from "@/assets/logos/speco.svg";
+import hikvisionLogo from "@/assets/logos/hikvision.svg";
+import ictLogo from "@/assets/logos/ict.svg";
+import saltoLogo from "@/assets/logos/salto.svg";
+import ubiquitiLogo from "@/assets/logos/ubiquiti.svg";
+import ruckusLogo from "@/assets/logos/ruckus.png";
+import ekahauLogo from "@/assets/logos/ekahau.svg";
+import fortinetLogo from "@/assets/logos/fortinet.svg";
+import arubaLogo from "@/assets/logos/aruba.svg";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -154,32 +154,32 @@ const platforms = [
   {
     category: "Cameras",
     logos: [
-      { src: digitalWatchdogLogo.url, alt: "Digital WatchDog" },
-      { src: specoLogo.url, alt: "Speco Technologies" },
-      { src: hikvisionLogo.url, alt: "Hikvision" },
+      { src: digitalWatchdogLogo, alt: "Digital WatchDog" },
+      { src: specoLogo, alt: "Speco Technologies" },
+      { src: hikvisionLogo, alt: "Hikvision" },
     ],
   },
   {
     category: "Access Control",
     logos: [
-      { src: ictLogo.url, alt: "ICT — Integrated Control Technology" },
-      { src: saltoLogo.url, alt: "Salto Systems" },
+      { src: ictLogo, alt: "ICT — Integrated Control Technology" },
+      { src: saltoLogo, alt: "Salto Systems" },
     ],
   },
   {
     category: "Wireless",
     logos: [
-      { src: ubiquitiLogo.url, alt: "Ubiquiti" },
-      { src: ruckusLogo.url, alt: "Ruckus Networks" },
-      { src: ekahauLogo.url, alt: "Ekahau" },
+      { src: ubiquitiLogo, alt: "Ubiquiti" },
+      { src: ruckusLogo, alt: "Ruckus Networks" },
+      { src: ekahauLogo, alt: "Ekahau" },
     ],
   },
   {
     category: "Network & Voice",
     logos: [
-      { src: ubiquitiLogo.url, alt: "Ubiquiti" },
-      { src: fortinetLogo.url, alt: "Fortinet" },
-      { src: arubaLogo.url, alt: "HPE Aruba Networking" },
+      { src: ubiquitiLogo, alt: "Ubiquiti" },
+      { src: fortinetLogo, alt: "Fortinet" },
+      { src: arubaLogo, alt: "HPE Aruba Networking" },
     ],
   },
 ];
