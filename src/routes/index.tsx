@@ -3,6 +3,16 @@ import { ContactForm } from "@/components/ContactForm";
 import logoUrl from "@/assets/smith-installations-horizontal-color.svg?url";
 import heroImage from "@/assets/hero-image.jpg";
 import servicesImage from "@/assets/services-image.jpg";
+import digitalWatchdogLogo from "@/assets/logos/digital-watchdog.svg.asset.json";
+import specoLogo from "@/assets/logos/speco.svg.asset.json";
+import hikvisionLogo from "@/assets/logos/hikvision.svg.asset.json";
+import ictLogo from "@/assets/logos/ict.svg.asset.json";
+import saltoLogo from "@/assets/logos/salto.svg.asset.json";
+import ubiquitiLogo from "@/assets/logos/ubiquiti.svg.asset.json";
+import ruckusLogo from "@/assets/logos/ruckus.png.asset.json";
+import ekahauLogo from "@/assets/logos/ekahau.svg.asset.json";
+import fortinetLogo from "@/assets/logos/fortinet.svg.asset.json";
+import arubaLogo from "@/assets/logos/aruba.svg.asset.json";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -143,19 +153,34 @@ const highlights = [
 const platforms = [
   {
     category: "Cameras",
-    items: "Digital WatchDog, Speco, Hikvision",
+    logos: [
+      { src: digitalWatchdogLogo.url, alt: "Digital WatchDog" },
+      { src: specoLogo.url, alt: "Speco Technologies" },
+      { src: hikvisionLogo.url, alt: "Hikvision" },
+    ],
   },
   {
     category: "Access Control",
-    items: "ICT, Salto",
+    logos: [
+      { src: ictLogo.url, alt: "ICT — Integrated Control Technology" },
+      { src: saltoLogo.url, alt: "Salto Systems" },
+    ],
   },
   {
     category: "Wireless",
-    items: "Site surveys, heat mapping, enterprise Wi-Fi design",
+    logos: [
+      { src: ubiquitiLogo.url, alt: "Ubiquiti" },
+      { src: ruckusLogo.url, alt: "Ruckus Networks" },
+      { src: ekahauLogo.url, alt: "Ekahau" },
+    ],
   },
   {
-    category: "Networks & Voice",
-    items: "Structured cabling, switching, PBX & cloud VoIP",
+    category: "Network & Voice",
+    logos: [
+      { src: ubiquitiLogo.url, alt: "Ubiquiti" },
+      { src: fortinetLogo.url, alt: "Fortinet" },
+      { src: arubaLogo.url, alt: "HPE Aruba Networking" },
+    ],
   },
 ];
 
@@ -300,7 +325,17 @@ function Index() {
                   className="rounded-xl border border-border bg-card p-5 text-card-foreground shadow-sm"
                 >
                   <h3 className="text-base font-semibold">{platform.category}</h3>
-                  <p className="mt-2 text-sm text-muted-foreground">{platform.items}</p>
+                  <div className="mt-4 flex flex-col items-center justify-center gap-6 border-t border-border pt-6">
+                    {platform.logos.map((logo) => (
+                      <img
+                        key={logo.alt}
+                        src={logo.src}
+                        alt={logo.alt}
+                        loading="lazy"
+                        className="h-10 w-auto max-w-[160px] object-contain"
+                      />
+                    ))}
+                  </div>
                 </div>
               ))}
             </div>
