@@ -26,12 +26,13 @@ jobs:
 
       - run: bun install --frozen-lockfile
 
-      # A user/site repo (<name>.github.io) serves at "/", a project repo at "/<repo>/".
+      # A custom domain (public/CNAME) serves the site at "/", so does a user/site
+      # repo (<name>.github.io). A project repo without one serves at "/<repo>/".
       # The build bakes this path into the page's asset links, so it has to match.
       - name: Set the Pages base path
         run: |
           repo="${GITHUB_REPOSITORY#*/}"
-          if [[ "$repo" == *.github.io ]]; then
+          if [[ -f public/CNAME || "$repo" == *.github.io ]]; then
             echo "PAGES_BASE=/" >> "$GITHUB_ENV"
           else
             echo "PAGES_BASE=/$repo/" >> "$GITHUB_ENV"
