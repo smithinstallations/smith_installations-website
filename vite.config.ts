@@ -13,7 +13,7 @@ import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 // `PAGES_BASE` is the path the site will be served from. GitHub Pages serves a
 // user/site repo (username.github.io) or a custom domain at "/", but a project
 // repo is served from "/<repo-name>/", so the CI workflow sets this to match.
-const pagesBase = process.env.PAGES_BASE || "/";
+const pagesBase = process.env["PAGES_BASE"] || "/";
 
 export default defineConfig({
   vite: {
