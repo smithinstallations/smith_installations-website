@@ -5,7 +5,6 @@ import heroImage from "@/assets/hero-image.jpg";
 import servicesImage from "@/assets/services-image.jpg";
 import digitalWatchdogLogo from "@/assets/logos/digital-watchdog.svg";
 import specoLogo from "@/assets/logos/speco.svg";
-import hikvisionLogo from "@/assets/logos/hikvision.svg";
 import ictLogo from "@/assets/logos/ict.svg";
 import saltoLogo from "@/assets/logos/salto.svg";
 import ubiquitiLogo from "@/assets/logos/ubiquiti.svg";
@@ -13,6 +12,9 @@ import ruckusLogo from "@/assets/logos/ruckus.png";
 import ekahauLogo from "@/assets/logos/ekahau.svg";
 import fortinetLogo from "@/assets/logos/fortinet.svg";
 import arubaLogo from "@/assets/logos/aruba.svg";
+import yealinkLogo from "@/assets/logos/yealink.png";
+import grandstreamLogo from "@/assets/logos/grandstream.png";
+import allworxLogo from "@/assets/logos/allworx.png";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -84,9 +86,9 @@ const services = [
   {
     title: "Video Surveillance",
     description:
-      "Commercial camera systems from Digital WatchDog, Speco, and Hikvision with remote viewing, storage, and alert integration.",
+      "Commercial camera systems from Digital WatchDog and Speco with remote viewing, storage, and alert integration.",
     capabilities: [
-      "Digital WatchDog, Speco, and Hikvision systems",
+      "Digital WatchDog and Speco systems",
       "IP, dome, and wireless cameras",
       "NVR/DVR storage and remote viewing",
       "Indoor and outdoor coverage design",
@@ -156,7 +158,6 @@ const platforms = [
     logos: [
       { src: digitalWatchdogLogo, alt: "Digital WatchDog" },
       { src: specoLogo, alt: "Speco Technologies" },
-      { src: hikvisionLogo, alt: "Hikvision" },
     ],
   },
   {
@@ -180,6 +181,9 @@ const platforms = [
       { src: ubiquitiLogo, alt: "Ubiquiti" },
       { src: fortinetLogo, alt: "Fortinet" },
       { src: arubaLogo, alt: "HPE Aruba Networking" },
+      { src: yealinkLogo, alt: "Yealink" },
+      { src: grandstreamLogo, alt: "Grandstream" },
+      { src: allworxLogo, alt: "Allworx" },
     ],
   },
 ];
