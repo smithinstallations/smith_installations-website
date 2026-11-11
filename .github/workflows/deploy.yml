@@ -40,6 +40,15 @@ jobs:
 
       - run: bun run build
 
+      # The upload step failed once with "dist/client: No such file or directory"
+      # even though the build step passed. List what the build actually left
+      # behind so the log shows where the output went if that happens again.
+      - name: Verify the static output exists
+        run: |
+          ls -la
+          ls -la dist || true
+          test -d dist/client
+
       - uses: actions/upload-pages-artifact@v5
         with:
           path: dist/client
