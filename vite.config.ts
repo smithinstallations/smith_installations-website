@@ -6,10 +6,23 @@
 // You can pass additional config via defineConfig({ vite: { ... }, etc... }) if needed.
 import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 
+// This site has no server-side data: the contact form posts straight to Formspree
+// from the browser. So every route is rendered to a plain .html file at build time
+// and the result can be served by any static host, including GitHub Pages.
+//
+// `PAGES_BASE` is the path the site will be served from. GitHub Pages serves a
+// user/site repo (username.github.io) or a custom domain at "/", but a project
+// repo is served from "/<repo-name>/", so the CI workflow sets this to match.
+const pagesBase = process.env["PAGES_BASE"] || "/";
+
 export default defineConfig({
+  vite: {
+    base: pagesBase,
+  },
   tanstackStart: {
-    // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
-    // nitro/vite builds from this
-    server: { entry: "server" },
+    prerender: {
+      enabled: true,
+      crawlLinks: true,
+    },
   },
 });
