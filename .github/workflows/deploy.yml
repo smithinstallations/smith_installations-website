@@ -40,14 +40,15 @@ jobs:
 
       - run: bun run build
 
-      # The upload step failed once with "dist/client: No such file or directory"
-      # even though the build step passed. List what the build actually left
-      # behind so the log shows where the output went if that happens again.
+      # Check the rendered homepage, not just an empty output folder.
       - name: Verify the static output exists
         run: |
-          ls -la
-          ls -la dist || true
-          test -d dist/client
+          if [[ ! -s dist/client/index.html ]]; then
+            echo "::error::The static homepage is missing from dist/client/index.html."
+            ls -la dist dist/client .output .output/public 2>/dev/null || true
+            exit 1
+          fi
+          ls -la dist/client
 
       - uses: actions/upload-pages-artifact@v5
         with:

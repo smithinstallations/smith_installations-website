@@ -8,3 +8,5 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+
+- Keep Nitro's public output at `dist/client` in all environments to match the GitHub Pages artifact path; sandbox-only defaults differ from GitHub's defaults.

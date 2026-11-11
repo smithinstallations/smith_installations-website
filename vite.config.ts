@@ -19,6 +19,15 @@ export default defineConfig({
   vite: {
     base: pagesBase,
   },
+  // Outside Lovable, Nitro defaults to .output/public. Keep the static files
+  // in the same location the GitHub Pages workflow uploads in every environment.
+  nitro: {
+    output: {
+      dir: "dist",
+      serverDir: "dist/server",
+      publicDir: "dist/client",
+    },
+  },
   tanstackStart: {
     prerender: {
       enabled: true,
