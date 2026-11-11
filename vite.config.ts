@@ -23,6 +23,4 @@ export default defineConfig({
       crawlLinks: true,
     },
   },
-  // GitHub Pages serves files only; the Cloudflare server bundle is not needed.
-  nitro: false,
 });
