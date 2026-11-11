@@ -1,8 +1,7 @@
 import { useState, type FormEvent } from "react";
 
-// Replace this with your Formspree form ID.
-// Get yours at https://formspree.io after signing up for free.
-const FORMSPREE_FORM_ID = "YOUR_FORM_ID_HERE";
+// Submissions are emailed to the address configured at formspree.io.
+const FORMSPREE_FORM_ID = "meagqkld";
 
 interface FormData {
   name: string;
@@ -34,12 +33,6 @@ export function ContactForm() {
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
-
-    if (FORMSPREE_FORM_ID === "YOUR_FORM_ID_HERE") {
-      setStatus("error");
-      setErrorMessage("Formspree form ID is not configured yet.");
-      return;
-    }
 
     setStatus("submitting");
     setErrorMessage("");
