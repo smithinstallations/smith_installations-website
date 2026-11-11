@@ -10,12 +10,14 @@ import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 // from the browser. So every route is rendered to a plain .html file at build time
 // and the result can be served by any static host, including GitHub Pages.
 //
-// `base: "./"` makes the built page reference its assets by relative path, so the
-// same build works at the site root (user.github.io or a custom domain) and under
-// a project subpath (user.github.io/repo/).
+// `PAGES_BASE` is the path the site will be served from. GitHub Pages serves a
+// user/site repo (username.github.io) or a custom domain at "/", but a project
+// repo is served from "/<repo-name>/", so the CI workflow sets this to match.
+const pagesBase = process.env.PAGES_BASE || "/";
+
 export default defineConfig({
   vite: {
-    base: "./",
+    base: pagesBase,
   },
   tanstackStart: {
     prerender: {
